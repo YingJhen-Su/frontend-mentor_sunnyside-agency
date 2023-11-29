@@ -2,67 +2,216 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Sunnyside agency landing page | Frontend Mentor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  About
-  Services
-  Projects
-  Contact
 
-  We are creatives
+<body class="container-fluid g-0">
+  <header class="header w-100">
+    <nav class="header__nav d-flex justify-content-between align-items-center position-relative">
+      <h1 class="header__title">
+        <span class="offscreen">sunnyside</span>
+        <a href="/"><img class="img-fluid" src="images/logo.svg" alt="logo image"></a>
+      </h1>
 
-  Transform your brand
+      <div class="menu d-none d-md-flex align-items-center justify-content-end">
+        <a class="text-decoration-none text-light" href="#about">About</a>
+        <a class="text-decoration-none text-light" href="#services">Services</a>
+        <a class="text-decoration-none text-light" href="#projects">Projects</a>
+        <a class="menu__contact text-uppercase text-head rounded-pill text-decoration-none text-blue" href="#">Contact</a>
+      </div>
 
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
+      <div class="menu__btn d-md-none" id="menu__btn">
+        <img class="img-fluid" src="images/icon-hamburger.svg" alt="munu button">
+      </div>
 
-  Learn more
+      <div class="menu__mobile d-md-none d-flex flex-column justify-content-center align-items-center position-absolute" id="menu__mobile">
+        <a class="text-decoration-none text-gray" href="#about">About</a>
+        <a class="text-decoration-none text-gray" href="#services">Services</a>
+        <a class="text-decoration-none text-gray" href="#projects">Projects</a>
+        <a class="menu__contact--mobile text-uppercase text-head rounded-pill text-decoration-none text-blue" href="#">Contact</a>
+      </div>
+    </nav>
+    
+    <section class="header__about text-center" id="about">
+      <h1 class="about__title text-uppercase text-1 text-head-bold space-2 text-light">We are creatives</h1>
+      <img class="about__icon img-fluid" src="images/icon-arrow-down.svg" alt="arrow on background">
+    </section>
+  </header>
+  
 
-  Stand out to the right audience
+  <main class="main">
+    <section class="main__services" id="services">
+      <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse g-0 text-center text-md-start">
+        <div class="col">
+          <picture>
+            <source srcset="/images/desktop/image-transform.jpg" media="(min-width: 768px)">
+            <img class="services_image w-100 h-auto" src="/images/mobile/image-transform.jpg" alt="image of service">
+          </picture>
+        </div>
+        
+        <div class="col">
+          <div class="services__content transform-content d-flex flex-column justify-content-center mx-auto">
+            <h2 class="services__title text-head-bold text-2 text-blue">Transform your brand</h2>
+            <p class="text-gray">We are a full-service creative agency specializing in helping brands grow fast. 
+              Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <a href="#" class="services__link text-uppercase text-head-bold text-blue text-decoration-none position-relative">Learn more</a>
+          </div>
+        </div>
+      </div>
 
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+      <div class="row row-cols-1 row-cols-md-2 g-0 text-center text-md-start">
+        <div class="col">
+          <picture>
+            <source srcset="/images/desktop/image-stand-out.jpg" media="(min-width: 768px)">
+            <img class="services_image w-100 h-auto" src="/images/mobile/image-stand-out.jpg" alt="image of service">
+          </picture>
+        </div>
+        
+        <div class="col">
+          <div class="services__content audience-content d-flex flex-column justify-content-center mx-auto">
+            <h2 class="services__title text-head-bold text-2 text-blue">Stand out to the right audience</h2>
+            <p class="text-gray">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+            <a href="#" class="services__link text-uppercase text-head-bold text-blue text-decoration-none position-relative">Learn more</a>
+          </div>
+        </div>
+      </div>
 
-  Learn more
+      <div class="row row-cols-1 row-cols-md-2 g-0 text-center">
+        <div class="col">
+          <div class="services__block position-relative">
+            <picture>
+              <source srcset="/images/desktop/image-graphic-design.jpg" media="(min-width: 768px)">
+              <img class="services_image w-100 h-auto" src="/images/mobile/image-graphic-design.jpg" alt="image of service">
+            </picture>
+  
+            <div class="block__content d-flex flex-column position-absolute text-graphic">
+              <h3 class="text-head-bold text-3">Graphic Design</h3>
+              <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="services__block position-relative">
+            <picture>
+              <source srcset="/images/desktop/image-photography.jpg" media="(min-width: 768px)">
+              <img class="services_image w-100 h-auto" src="/images/mobile/image-photography.jpg" alt="image of service">
+            </picture>
+            
+            <div class="block__content d-flex flex-column position-absolute text-photography">
+              <h3 class="text-head-bold text-3">Photography</h3>
+              <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+    <section class="projects text-center" id="projects">
+      <h3 class="projects__title text-uppercase text-5 text-head-bold space-2 text-fade">
+        Client testimonials
+      </h3>
+      
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 justify-content-center g-0">
+        <div class="col">
+          <div class="projects__client d-flex flex-column align-items-center h-100">
+            <img class="client__image object-fit-cover rounded-circle" src="images/image-emily.jpg" alt="image of Emily">
+            <p class="flex-grow-1">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+            <h4 class="client__name text-head-bold text-blue text-5">Emily R.</h4>
+            <p class="client__job text-fade text-6">Marketing Director</p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="projects__client d-flex flex-column align-items-center h-100">
+            <img class="client__image object-fit-cover rounded-circle" src="images/image-thomas.jpg" alt="image of Thomas"> 
+            <p class="flex-grow-1">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+            <h4 class="client__name text-head-bold text-blue text-5">Thomas S.</h4>
+            <p class="client__job text-fade text-6">Chief Operating Officer</p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="projects__client d-flex flex-column align-items-center h-100">
+            <img class="client__image object-fit-cover rounded-circle" src="images/image-jennie.jpg" alt="image of Jennie">
+            <p class="flex-grow-1">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <h4 class="client__name text-head-bold text-blue text-5">Jennie F.</h4>
+            <p class="client__job text-fade text-6">Business Owner</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
 
-  Client testimonials
+    <section class="projects__gallery">
+      <div class="row row-cols-2 row-cols-md-4 g-0">
+        <div class="col">
+          <picture>
+            <source srcset="/images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 768px)">
+            <img class="projects_image w-100 h-auto" src="/images/mobile/image-gallery-milkbottles.jpg" alt="image of projects">
+          </picture>
+        </div>
+        
+        <div class="col">
+          <picture>
+            <source srcset="/images/desktop/image-gallery-orange.jpg" media="(min-width: 768px)">
+            <img class="projects_image w-100 h-auto" src="/images/mobile/image-gallery-orange.jpg" alt="image of projects">
+          </picture>
+        </div>
+        
+        <div class="col">
+          <picture>
+            <source srcset="/images/desktop/image-gallery-cone.jpg" media="(min-width: 768px)">
+            <img class="projects_image w-100 h-auto" src="/images/mobile/image-gallery-cone.jpg" alt="image of projects">
+          </picture>
+        </div>
+        
+        <div class="col">
+          <picture>
+            <source srcset="/images/desktop/image-gallery-sugarcubes.jpg" media="(min-width: 768px)">
+            <img class="projects_image w-100 h-auto" src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="image of projects">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
 
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
+  <footer class="footer text-center">
+    <div class="row justify-content-center g-0">
+      <div class="col-12 col-md-4">
+        <div class="footer__logo w-50 mx-auto">
+          <img class="w-100 h-auto" src="images/logo-cyan.svg" alt="logo">
+        </div>
+  
+        <div class="footer__menu w-100 d-flex align-items-center justify-content-around">
+          <a class="text-decoration-none text-footer" href="#about">About</a>
+          <a class="text-decoration-none text-footer" href="#services">Services</a>
+          <a class="text-decoration-none text-footer" href="#projects">Projects</a>
+        </div>
+        
+        <div class="footer__media w-50 mx-auto d-flex align-items-center justify-content-between">
+          <a class="media__link facebook" href="#"></a>
+          <a class="media__link instagram" href="#"></a>
+          <a class="media__link twitter" href="#"></a>
+          <a class="media__link pinterest" href="#"></a>
+        </div>
+    
+        <div class="attribution text-center">
+          Challenge by <a class="nowrap text-attribution" href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>. 
+          Coded by <a class="nowrap text-attribution" href="https://www.frontendmentor.io/profile/YingJhen-Su" target="_blank">Vivian Su</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+  
 
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
-
-  About
-  Services
-  Projects
-  Contact
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
