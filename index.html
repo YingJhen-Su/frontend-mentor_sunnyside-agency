@@ -5,40 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Sunnyside agency landing page | Frontend Mentor</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="container-fluid g-0">
+<body class="container-fluid g-0 bg-white text-second">
   <header class="header w-100">
-    <nav class="header__nav d-flex justify-content-between align-items-center position-relative">
+    <nav class="header__nav d-flex justify-content-between align-items-center position-relative py-8 px-5 px-md-10 mb-13 mb-md-17">
       <h1 class="header__title">
-        <span class="offscreen">sunnyside</span>
+        <span class="visually-hidden">sunnyside</span>
         <a href="/"><img class="img-fluid" src="images/logo.svg" alt="logo image"></a>
       </h1>
 
-      <div class="menu d-none d-md-flex align-items-center justify-content-end">
-        <a class="text-decoration-none text-light" href="#about">About</a>
-        <a class="text-decoration-none text-light" href="#services">Services</a>
-        <a class="text-decoration-none text-light" href="#projects">Projects</a>
-        <a class="menu__contact text-uppercase text-head rounded-pill text-decoration-none text-blue" href="#">Contact</a>
+      <div class="menu d-none d-md-flex align-items-center justify-content-end gap-12">
+        <a class="text-decoration-none text-white" href="#about">About</a>
+        <a class="text-decoration-none text-white" href="#services">Services</a>
+        <a class="text-decoration-none text-white" href="#projects">Projects</a>
+        <a class="menu__contact text-uppercase text-head rounded-pill text-decoration-none text-main py-4 px-8" href="#">Contact</a>
       </div>
 
       <div class="menu__btn d-md-none" id="menu__btn">
         <img class="img-fluid" src="images/icon-hamburger.svg" alt="munu button">
       </div>
 
-      <div class="menu__mobile d-md-none d-flex flex-column justify-content-center align-items-center position-absolute" id="menu__mobile">
+      <div class="menu__mobile d-md-none d-flex flex-column justify-content-center align-items-center gap-7 position-absolute bg-white" id="menu__mobile">
         <a class="text-decoration-none text-gray" href="#about">About</a>
         <a class="text-decoration-none text-gray" href="#services">Services</a>
         <a class="text-decoration-none text-gray" href="#projects">Projects</a>
-        <a class="menu__contact--mobile text-uppercase text-head rounded-pill text-decoration-none text-blue" href="#">Contact</a>
+        <a class="menu__contact--mobile text-uppercase text-head rounded-pill text-decoration-none text-main py-4 px-8" href="#">Contact</a>
       </div>
     </nav>
     
     <section class="header__about text-center" id="about">
-      <h1 class="about__title text-uppercase text-1 text-head-bold space-2 text-light">We are creatives</h1>
-      <img class="about__icon img-fluid" src="images/icon-arrow-down.svg" alt="arrow on background">
+      <h1 class="about__title text-uppercase text-1 text-head-bold space-2 text-white">We are creatives</h1>
+      <img class="about__icon img-fluid mt-13 mt-md-18" src="images/icon-arrow-down.svg" alt="arrow on background">
     </section>
   </header>
   
@@ -54,11 +54,11 @@
         </div>
         
         <div class="col">
-          <div class="services__content transform-content d-flex flex-column justify-content-center mx-auto">
-            <h2 class="services__title text-head-bold text-2 text-blue">Transform your brand</h2>
+          <div class="services__content transform-content d-flex flex-column justify-content-center gap-8 gap-md-4 gap-lg-10 mx-auto">
+            <h2 class="services__title text-head-bold text-2 text-main">Transform your brand</h2>
             <p class="text-gray">We are a full-service creative agency specializing in helping brands grow fast. 
               Engage your clients through compelling visuals that do most of the marketing for you.</p>
-            <a href="#" class="services__link text-uppercase text-head-bold text-blue text-decoration-none position-relative">Learn more</a>
+            <a href="#" class="services__link text-uppercase text-head-bold text-main text-decoration-none position-relative">Learn more</a>
           </div>
         </div>
       </div>
@@ -72,10 +72,10 @@
         </div>
         
         <div class="col">
-          <div class="services__content audience-content d-flex flex-column justify-content-center mx-auto">
-            <h2 class="services__title text-head-bold text-2 text-blue">Stand out to the right audience</h2>
+          <div class="services__content audience-content d-flex flex-column justify-content-center gap-8 gap-md-4 gap-lg-10 mx-auto">
+            <h2 class="services__title text-head-bold text-2 text-main">Stand out to the right audience</h2>
             <p class="text-gray">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-            <a href="#" class="services__link text-uppercase text-head-bold text-blue text-decoration-none position-relative">Learn more</a>
+            <a href="#" class="services__link text-uppercase text-head-bold text-main text-decoration-none position-relative">Learn more</a>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
               <img class="services_image w-100 h-auto" src="/images/mobile/image-graphic-design.jpg" alt="image of service">
             </picture>
   
-            <div class="block__content d-flex flex-column position-absolute text-graphic">
+            <div class="block__content d-flex flex-column position-absolute gap-8 gap-md-4 gap-lg-7 text-graphic">
               <h3 class="text-head-bold text-3">Graphic Design</h3>
               <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
             </div>
@@ -102,7 +102,7 @@
               <img class="services_image w-100 h-auto" src="/images/mobile/image-photography.jpg" alt="image of service">
             </picture>
             
-            <div class="block__content d-flex flex-column position-absolute text-photography">
+            <div class="block__content d-flex flex-column position-absolute gap-8 gap-md-4 gap-lg-7 text-photography">
               <h3 class="text-head-bold text-3">Photography</h3>
               <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
             </div>
@@ -112,35 +112,35 @@
     </section>
     
 
-    <section class="projects text-center" id="projects">
-      <h3 class="projects__title text-uppercase text-5 text-head-bold space-2 text-fade">
+    <section class="projects text-center pt-15 pt-md-20 pb-8 pb-md-20" id="projects">
+      <h3 class="projects__title text-uppercase text-5 text-head-bold space-2 text-fade mb-15 mb-md-17">
         Client testimonials
       </h3>
       
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 justify-content-center g-0">
         <div class="col">
-          <div class="projects__client d-flex flex-column align-items-center h-100">
-            <img class="client__image object-fit-cover rounded-circle" src="images/image-emily.jpg" alt="image of Emily">
+          <div class="projects__client d-flex flex-column align-items-center h-100 px-8 px-md-4 pb-15 pb-md-0">
+            <img class="client__image object-fit-cover rounded-circle mb-8 mb-md-16" src="images/image-emily.jpg" alt="image of Emily">
             <p class="flex-grow-1">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-            <h4 class="client__name text-head-bold text-blue text-5">Emily R.</h4>
+            <h4 class="client__name text-head-bold text-main text-5 mt-8 mt-md-19 mb-3">Emily R.</h4>
             <p class="client__job text-fade text-6">Marketing Director</p>
           </div>
         </div>
         
         <div class="col">
-          <div class="projects__client d-flex flex-column align-items-center h-100">
-            <img class="client__image object-fit-cover rounded-circle" src="images/image-thomas.jpg" alt="image of Thomas"> 
+          <div class="projects__client d-flex flex-column align-items-center h-100 px-8 px-md-4 pb-15 pb-md-0">
+            <img class="client__image object-fit-cover rounded-circle mb-8 mb-md-16" src="images/image-thomas.jpg" alt="image of Thomas"> 
             <p class="flex-grow-1">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-            <h4 class="client__name text-head-bold text-blue text-5">Thomas S.</h4>
+            <h4 class="client__name text-head-bold text-main text-5 mt-8 mt-md-19 mb-3">Thomas S.</h4>
             <p class="client__job text-fade text-6">Chief Operating Officer</p>
           </div>
         </div>
         
         <div class="col">
-          <div class="projects__client d-flex flex-column align-items-center h-100">
-            <img class="client__image object-fit-cover rounded-circle" src="images/image-jennie.jpg" alt="image of Jennie">
+          <div class="projects__client d-flex flex-column align-items-center h-100 px-8 px-md-4 pb-15 pb-md-0">
+            <img class="client__image object-fit-cover rounded-circle mb-8 mb-md-16" src="images/image-jennie.jpg" alt="image of Jennie">
             <p class="flex-grow-1">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-            <h4 class="client__name text-head-bold text-blue text-5">Jennie F.</h4>
+            <h4 class="client__name text-head-bold text-main text-5 mt-8 mt-md-19 mb-3">Jennie F.</h4>
             <p class="client__job text-fade text-6">Business Owner</p>
           </div>
         </div>
@@ -182,20 +182,20 @@
   </main>
 
 
-  <footer class="footer text-center">
+  <footer class="footer text-center pt-15 pt-md-16 pb-8">
     <div class="row justify-content-center g-0">
       <div class="col-12 col-md-4">
-        <div class="footer__logo w-50 mx-auto">
+        <div class="footer__logo w-50 mx-auto mb-10">
           <img class="w-100 h-auto" src="images/logo-cyan.svg" alt="logo">
         </div>
   
-        <div class="footer__menu w-100 d-flex align-items-center justify-content-around">
+        <div class="footer__menu w-100 d-flex align-items-center justify-content-around mb-17">
           <a class="text-decoration-none text-footer" href="#about">About</a>
           <a class="text-decoration-none text-footer" href="#services">Services</a>
           <a class="text-decoration-none text-footer" href="#projects">Projects</a>
         </div>
         
-        <div class="footer__media w-50 mx-auto d-flex align-items-center justify-content-between">
+        <div class="footer__media w-50 d-flex align-items-center justify-content-between mx-auto mb-12 mb-md-8">
           <a class="media__link facebook" href="#"></a>
           <a class="media__link instagram" href="#"></a>
           <a class="media__link twitter" href="#"></a>
@@ -203,15 +203,13 @@
         </div>
     
         <div class="attribution text-center">
-          Challenge by <a class="nowrap text-attribution" href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>. 
-          Coded by <a class="nowrap text-attribution" href="https://www.frontendmentor.io/profile/YingJhen-Su" target="_blank">Vivian Su</a>.
+          Challenge by <a class="text-nowrap text-link" href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>. 
+          Coded by <a class="text-nowrap text-link" href="https://www.frontendmentor.io/profile/YingJhen-Su" target="_blank">Vivian Su</a>.
         </div>
       </div>
     </div>
   </footer>
   
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
