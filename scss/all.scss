@@ -1,1 +1,332 @@
 @import "custom-bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+/* || Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+/* || Variables */
+/* Font */
+$FF:      'Barlow', sans-serif;
+$FF-HEAD: 'Fraunces', serif;
+$FW:       600;
+$FW-BOLD:  700;
+$FW-BLACK: 900;
+
+$FS-H1:    2.25rem;
+$FS-H2:    2rem;
+$FS-H3:    1.75rem;
+$FS-H4:    1.5rem;
+$FS-H5:    1.125rem;
+$FS-H6:    1rem;
+$FS-H1-LG: 3.5rem;
+$FS-H2-LG: 3rem;
+$FS-H3-LG: 2.5rem;
+
+$LS: 0.2em;
+
+/* Color */
+$BG-COLOR:         hsl(0, 0%, 100%);
+$BG-TRANSPARENT:   hsla(0, 0%, 100%, 0.3);
+$SERVICES-COLOR-1: hsl(51, 100%, 49%);
+$SERVICES-COLOR-2: hsl(7, 99%, 70%);
+$FOOTER-COLOR:     hsl(166, 45%, 70%);
+$FOOTER-FTCOLOR:   hsl(168, 34%, 41%);
+
+
+/* || Mixin */
+@mixin md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
+}
+
+
+/* || Utility Classes */
+.text {
+    &-h1 {
+        font-size: $FS-H1;
+        @include lg {
+            font-size: $FS-H1-LG;
+        }
+    }
+
+    &-h2 {
+        font-size: $FS-H2;
+        @include lg {
+            font-size: $FS-H2-LG;
+        }
+    }
+
+    &-h3 {
+        font-size: $FS-H3;
+        @include lg {
+            font-size: $FS-H3-LG;
+        }
+    }
+
+    &-h4 {
+        font-size: $FS-H4;
+    }
+
+    &-h5 {
+        font-size: $FS-H5;
+    }
+
+    &-h6 {
+        font-size: $FS-H6;
+    }
+
+    &-head {
+        font-family: $FF-HEAD;
+        font-weight: $FW-BOLD;
+    }
+
+    &-head-bold {
+        font-family: $FF-HEAD;
+        font-weight: $FW-BLACK;
+    }
+}
+
+.space-2 {
+    letter-spacing: $LS;
+}
+
+
+/* || General */
+body {
+    font: {
+        family: $FF;
+        weight: $FW;
+        size: $FS-H5;
+    }
+    background-color: $BG-COLOR;
+    color: $secondary;
+}
+
+
+/* || Header */
+header {
+    min-height: 33.6rem;
+    background: {
+        image: url('../images/mobile/image-header.jpg');
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+    }
+
+    @include md {
+        min-height: 50rem;
+        background-image: url('../images/desktop/image-header.jpg');
+    }
+}
+
+.menu {
+    &__mobile {
+        width: 88%;
+        height: 20rem;
+        top: -500px;
+        left: calc(12% / 2);
+        transition: all 0.3s ease-in-out;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border: 12px solid;
+            border-color: transparent $BG-COLOR $BG-COLOR transparent;
+            position: absolute;
+            top: -23px;
+            right: 0;
+        }
+
+        &.active {
+            top: calc(100% + 1rem);
+        }
+    }
+
+    &__contact {
+        &--mobile {
+            background-color: $SERVICES-COLOR-1;
+        }
+
+        @include md {
+            background-color: $BG-COLOR;
+            color: $primary;
+
+            &:focus,
+            &:hover {
+                background-color: $BG-TRANSPARENT;
+                color: $BG-COLOR;
+            }
+        }
+    }
+}
+
+
+/* || Main */
+/* Services */
+.services__content {
+    width: 85%;
+    min-height: 27.5rem;
+
+    @include md {
+        min-height: 100%;
+    }
+
+    @include lg {
+        width: 75%;
+    }
+
+    @include xxl {
+        width: 66%;
+    }
+
+    .services__link {
+        &::after {
+            content: '';
+            display: block;
+            width: 8.75rem;
+            height: 0.7rem;
+            border-radius: 10px;
+            opacity: 0.4;
+            position: absolute;
+            left: calc(50% - 4.375rem);
+            top: 60%;
+            z-index: -1;
+
+            @include md {
+                left: -0.25rem;
+            }
+        }
+
+        &:focus::after,
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}
+
+.transform-content {
+    .services__link::after {
+        background-color: $SERVICES-COLOR-1;
+    }
+}
+
+.audience-content {
+    .services__link::after {
+        background-color: $SERVICES-COLOR-2;
+    }
+}
+
+.block__content {
+    width: 90%;
+    top: 66%;
+    left: calc(10% / 2);
+
+    @include md {
+        top: 51%;
+    }
+
+    @include lg {
+        width: 75%;
+        top: 60%;
+        left: calc(25% / 2);
+    }
+
+    @include xxl {
+        width: 50%;
+        left: calc(50% / 2);
+    }
+}
+
+/* Projects */
+.client__image {
+    width: 4.5rem;
+    height: auto;
+    object-position: center;
+}
+
+
+/* || Footer */
+footer {
+    background-color: $FOOTER-COLOR;
+}
+
+.footer__menu {
+    a {
+        color: $FOOTER-FTCOLOR;
+
+        &:focus,
+        &:hover {
+            color: $BG-COLOR;
+        }
+    }
+}
+
+.media__link {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: {
+        repeat: no-repeat;
+        position: center center;
+        size: cover;
+    }
+
+    &.facebook {
+        background-image: url('../images/icon-facebook.svg');
+
+        &:focus,
+        &:hover {
+            background-image: url('../images/icon-facebook-white.svg');
+        }
+    }
+
+    &.instagram {
+        background-image: url('../images/icon-instagram.svg');
+
+        &:focus,
+        &:hover {
+            background-image: url('../images/icon-instagram-white.svg');
+        }
+    }
+
+    &.twitter {
+        background-image: url('../images/icon-twitter.svg');
+
+        &:focus,
+        &:hover {
+            background-image: url('../images/icon-twitter-white.svg');
+        }
+    }
+
+    &.pinterest {
+        background-image: url('../images/icon-pinterest.svg');
+
+        &:focus,
+        &:hover {
+            background-image: url('../images/icon-pinterest-white.svg');
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+}
