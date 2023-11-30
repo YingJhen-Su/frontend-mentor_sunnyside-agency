@@ -6,6 +6,28 @@
 
 // 2. Include any default variable overrides here
 
+// scss-docs-start theme-color-variables
+$primary:       hsl(212, 27%, 19%);
+$secondary:     hsl(213, 9%, 39%);
+$ss-gray:       hsl(232, 10%, 55%);
+$ss-fade:       hsl(210, 4%, 67%);
+$ss-link:       hsl(228, 45%, 44%);
+$ss-green:      hsl(167, 40%, 24%);
+$ss-blue:       hsl(198, 62%, 26%);
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "ss-gray":    $ss-gray,
+  "ss-fade":    $ss-fade,
+  "ss-link":    $ss-link,
+  "ss-green":   $ss-green,
+  "ss-blue":    $ss-blue
+);
+// scss-docs-end theme-colors-map
+
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem;
 $spacers: (
@@ -33,26 +55,9 @@ $spacers: (
 );
 // scss-docs-end spacer-variables-maps
 
-// scss-docs-start font-variables
-// $font-size-base:              1rem;
-// $h1-font-size:                $font-size-base * 2.25;
-// $h2-font-size:                $font-size-base * 2;
-// $h3-font-size:                $font-size-base * 1.75;
-// $h4-font-size:                $font-size-base * 1.5;
-// $h5-font-size:                $font-size-base * 1.125;
-// $h6-font-size:                $font-size-base;
-// scss-docs-end font-variables
-
 // scss-docs-start headings-variables
 $headings-margin-bottom: 0;
 // scss-docs-end headings-variables
-
-// breakpoint lg 992px
-// @media screen and (min-width: 992px) {
-//   $h1-font-size:                $font-size-base * 3.5;
-//   $h2-font-size:                $font-size-base * 3;
-//   $h3-font-size:                $font-size-base * 2.5;
-// }
 
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
