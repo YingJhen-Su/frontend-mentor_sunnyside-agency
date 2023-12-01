@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-using-bootstrap-and-scss-K0_3ysiAer](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-using-bootstrap-and-scss-K0_3ysiAer)
 - Live Site URL: [https://yingjhen-su.github.io/frontend-mentor_sunnyside-agency/](https://yingjhen-su.github.io/frontend-mentor_sunnyside-agency/)
 
 ## My process
@@ -118,11 +118,11 @@ $spacers: (
         top: -500px;
         left: calc(12% / 2);
         transition: all 0.3s ease-in-out;
-    }
 
-    &.active {
-        top: calc(100% + 1rem);
-    }
+        &.active {
+            top: calc(100% + 1rem);
+        }
+    } 
 }
 ```
 
