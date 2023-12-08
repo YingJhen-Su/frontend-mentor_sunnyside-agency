@@ -139,6 +139,53 @@ header {
 }
 
 .menu {
+    &__btn {
+        width: 48px;
+        height: 48px;
+        // background-color: transparent;
+        // border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__bar {
+        &,
+        &::before,
+        &::after {
+            width: 40px;
+            height: 5px;
+            background-color: #FFF;
+            border-radius: 5px;
+            position: absolute;
+            transition: all 0.5s;
+        }
+
+        &::before {
+            content: '';
+            transform: translate(0, -10px);
+        }
+
+        &::after {
+            content: '';
+            transform: translate(0, 10px);
+        }
+
+        &.toggle {
+            background-color: transparent;
+            transform: rotate(720deg);
+            
+            &::after {
+                transform: rotate(45deg);
+            }
+            
+            &::before {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
     &__mobile {
         width: 88%;
         height: 20rem;

@@ -13110,6 +13110,40 @@ header {
   }
 }
 
+.menu__btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.menu__bar, .menu__bar::before, .menu__bar::after {
+  width: 40px;
+  height: 5px;
+  background-color: #FFF;
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.5s;
+}
+.menu__bar::before {
+  content: "";
+  transform: translate(0, -10px);
+}
+.menu__bar::after {
+  content: "";
+  transform: translate(0, 10px);
+}
+.menu__bar.toggle {
+  background-color: transparent;
+  transform: rotate(720deg);
+}
+.menu__bar.toggle::after {
+  transform: rotate(45deg);
+}
+.menu__bar.toggle::before {
+  transform: rotate(-45deg);
+}
 .menu__mobile {
   width: 88%;
   height: 20rem;
